@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#e4161e">
+<meta name="theme-color" content="#ffffff">
 <title>Junior Game Lounge · Burhaniye</title>
 <meta name="description" content="Burhaniye'de 5 yarış kokpiti ve 2 PS5. Her gün 09:00–02:00 açık. Online randevu al.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e4161e'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='Arial Black,Arial,sans-serif' font-weight='900'%3EJ%3C/text%3E%3C/svg%3E">
@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://ALAN-ADI/img/og.jpg"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Caveat:wght@600&family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,205 +25,172 @@
 <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3.5h16A1.5 1.5 0 0 1 21.5 5v11a1.5 1.5 0 0 1-1.5 1.5H10l-5.5 4v-4H4A1.5 1.5 0 0 1 2.5 16V5A1.5 1.5 0 0 1 4 3.5z"/><path fill="none" stroke="var(--chat-dots, #fff)" stroke-width="2.4" stroke-linecap="round" d="M8 10.5h.01M12 10.5h.01M16 10.5h.01"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" d="M4 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M4 12h15M13 6l6 6-6 6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 1.5a7.5 7.5 0 0 0-7.5 7.5c0 5.4 7.5 13.5 7.5 13.5s7.5-8.1 7.5-13.5A7.5 7.5 0 0 0 12 1.5zm0 10.3a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/></symbol>
   <symbol id="i-cam" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></symbol>
-  <symbol id="i-wheel" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="11"/><path fill="currentColor" d="M14 45h72l-7 16H21z"/><path fill="currentColor" d="M42 58h16l-3 30h-10z"/><circle cx="50" cy="52" r="9" fill="var(--hub, #e4161e)"/><rect x="47" y="12" width="6" height="12" fill="var(--hub, #e4161e)"/></symbol>
 </svg>
 
+<a class="skip" href="#bilet">Randevuya geç</a>
+
 <!-- ÜST -->
-<header class="top">
+<header class="top" id="top">
   <div class="wrap top-in">
-    <a class="mark" href="#top" aria-label="Junior Game Lounge, sayfanın başı"><span class="notch-x" lang="en">Junior</span></a>
-    <p class="status" id="status"><span id="statusText">Her gün 09:00–02:00</span></p>
+    <a class="mark" href="#top" aria-label="Junior Game Lounge, sayfanın başı">
+      <span class="mark-j" lang="en" aria-hidden="true">JUNIOR</span>
+      <span class="mark-s" aria-hidden="true">Game<br>Lounge</span>
+    </a>
+    <p class="status" id="status"><i class="status-dot" aria-hidden="true"></i><span id="statusText">Her gün 09:00–02:00</span></p>
     <nav class="nav" aria-label="Bölümler">
       <a href="#sistemler">Sistemler</a>
       <a href="#fiyatlar">Fiyatlar</a>
       <a href="#konum">Konum</a>
+      <a class="nav-cta" href="#bilet">Randevu al</a>
     </nav>
     <a class="top-call" href="tel:+905467767998" aria-label="Ara: 0546 776 79 98"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>0546 776 79 98</span></a>
   </div>
 </header>
 
-<main id="top">
+<main>
 
-<!-- GİRİŞ: kırmızı tabela bloğu + dükkânın polaroidi -->
+<!-- GİRİŞ -->
 <section class="hero" aria-labelledby="h-hero">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="tape-label">Burhaniye · İskele Mah.</p>
+      <p class="eyebrow">Burhaniye · İskele Mah.</p>
       <h1 class="logo" id="h-hero" aria-label="Junior Game Lounge">
-        <span class="logo-big" aria-hidden="true"><span>J</span><span>U</span><span>N</span><span>I</span><span>O</span><span>R</span></span>
-        <span class="logo-sub" aria-hidden="true">Game Lounge</span>
+        <span class="logo-big" lang="en" aria-hidden="true">JUNIOR</span>
+        <span class="lock-sub" lang="en" aria-hidden="true"><span>Game</span><i></i><span>Lounge</span></span>
       </h1>
-      <p class="tagline">Direksiyon hazır. <span class="scrawl">Sıra sende.<svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C40 4 80 15 120 8 S180 5 197 10"/></svg></span></p>
-      <p class="lead">3 Standart, 2 Pro kokpit ve 2 PS5.</p>
+      <p class="tagline">Direksiyon hazır. <em>Sıra sende.</em></p>
+
       <div class="hero-cta">
-        <span class="tkt-shadow"><a class="tkt notch-x" href="#bilet"><span class="tkt-main">Randevu al</span><span class="tkt-sub">Her gün 09:00–02:00</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></span>
-        <a class="call-link" href="tel:+905467767998">ya da ara: <b>0546 776 79 98</b></a>
+        <a class="btn btn-paper" href="#bilet"><span>Randevu al</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="tel:+905467767998"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>0546 776 79 98</span></a>
       </div>
     </div>
 
-    <div class="hero-art">
-      <figure class="polaroid">
-        <span class="tape" aria-hidden="true"></span>
-        <div class="polaroid-img">
-          <img src="img/salon-on.jpg" alt="Dükkânın önü: köşede cam vitrin, üstünde kırmızı JUNIOR GAME LOUNGE tabelası, içeride kokpitler" width="335" height="597">
-        </div>
-        <figcaption>Eski Ayvalık Cad. No:&nbsp;5</figcaption>
-      </figure>
-      <div class="badge" aria-hidden="true">
-        <svg class="badge-ring" viewBox="0 0 200 200">
-          <defs><path id="ring" d="M100,100 m-77,0 a77,77 0 1,1 154,0 a77,77 0 1,1 -154,0"/></defs>
-          <circle cx="100" cy="100" r="97" fill="#e4161e" stroke="#111" stroke-width="5"/>
-          <text><textPath href="#ring" textLength="476" lengthAdjust="spacing">HER GÜN AÇIK ✱ 09:00–02:00 ✱</textPath></text>
-        </svg>
-        <span class="badge-core"><svg><use href="#i-wheel"/></svg></span>
+    <ul class="figures" aria-label="Sistemler">
+      <li><b>3</b><span>Standart<br>kokpit</span></li>
+      <li><b>2</b><span>Pro<br>kokpit</span></li>
+      <li><b>2</b><span>PS5<br>istasyon</span></li>
+    </ul>
+
+    <figure class="hero-photo">
+      <div class="photo">
+        <img src="img/salon-on.jpg" alt="Dükkânın önü: köşede cam vitrin, üstünde kırmızı JUNIOR GAME LOUNGE tabelası, içeride kokpitler" width="335" height="597" decoding="async" fetchpriority="high">
       </div>
-    </div>
+      <figcaption>
+        <span>Eski Ayvalık Cad.&nbsp;No:&nbsp;5</span>
+        <span>Her gün 09:00–02:00</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
 
-<!-- 01 SİSTEMLER: kartuşlar -->
-<section class="sys" id="sistemler" aria-labelledby="h-sys">
+<!-- 01 SİSTEMLER -->
+<section class="sec sys" id="sistemler" aria-labelledby="h-sys">
   <div class="wrap">
     <header class="head">
-      <span class="head-no" aria-hidden="true">01</span>
+      <p class="head-no" aria-hidden="true"><span>01</span></p>
       <h2 id="h-sys">Sistemler</h2>
     </header>
 
-    <div class="carts">
-      <article class="cart cart-std rv">
-        <div class="cart-in">
-          <div class="cart-grip" aria-hidden="true"><span>STD-3</span></div>
-          <div class="cart-label">
-            <div class="art-ph" role="img" aria-label="Standart kokpit fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>Standart kokpit fotoğrafı</span></div>
-            <p class="price-sticker"><b>200</b><span>₺ / saat</span></p>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ph" role="img" aria-label="Standart kokpit fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>Standart kokpit</span></div>
+        <div class="card-body">
+          <h3>Standart</h3>
+          <div class="card-meta">
+            <p class="card-units">3 kokpit</p>
+            <p class="card-price"><b>200 ₺</b><span>/ saat</span></p>
           </div>
-          <div class="cart-body">
-            <div class="cart-title">
-              <h3>Standart</h3>
-              <p class="units"><span class="slots" aria-hidden="true"><i></i><i></i><i></i></span>3 kokpit</p>
-            </div>
-            <ul class="spec">
-              <li>Logitech G923 direksiyon</li>
-              <li>3'lü pedal + vites</li>
-              <li>49" kavisli ekran</li>
-            </ul>
-            <p class="games"><span>Oyunlar</span>Assetto Corsa Competizione&nbsp;· F1&nbsp;25&nbsp;· Assetto Corsa&nbsp;EVO&nbsp;· Forza Horizon&nbsp;5</p>
-          </div>
+          <dl class="spec">
+            <div><dt>Direksiyon</dt><dd>Logitech G923</dd></div>
+            <div><dt>Pedal</dt><dd>3'lü pedal + vites</dd></div>
+            <div><dt>Ekran</dt><dd>49" kavisli</dd></div>
+          </dl>
+          <p class="games"><span>Oyunlar</span>Assetto Corsa Competizione · F1&nbsp;25 · Assetto Corsa&nbsp;EVO · Forza Horizon&nbsp;5</p>
         </div>
       </article>
 
-      <article class="cart cart-pro rv">
-        <div class="cart-in">
-          <div class="cart-grip" aria-hidden="true"><span>PRO-2</span></div>
-          <div class="cart-label">
-            <div class="art-ph" role="img" aria-label="Pro kokpit fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>Pro kokpit fotoğrafı</span></div>
-            <p class="price-sticker"><b>300</b><span>₺ / saat</span></p>
+      <article class="card card-pro rv">
+        <div class="ph" role="img" aria-label="Pro kokpit fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>Pro kokpit</span></div>
+        <div class="card-body">
+          <h3>Pro</h3>
+          <div class="card-meta">
+            <p class="card-units">2 kokpit</p>
+            <p class="card-price"><b>300 ₺</b><span>/ saat</span></p>
           </div>
-          <div class="cart-body">
-            <div class="cart-title">
-              <h3>Pro</h3>
-              <p class="units"><span class="slots" aria-hidden="true"><i></i><i></i></span>2 kokpit</p>
-            </div>
-            <ul class="spec">
-              <li>Direct-drive direksiyon</li>
-              <li>Load-cell pedal</li>
-              <li>3 ekran</li>
-            </ul>
-            <p class="games"><span>Oyunlar</span>Assetto Corsa Competizione&nbsp;· iRacing&nbsp;· F1&nbsp;25&nbsp;· DiRT Rally&nbsp;2.0</p>
-          </div>
+          <dl class="spec">
+            <div><dt>Direksiyon</dt><dd>Direct-drive</dd></div>
+            <div><dt>Pedal</dt><dd>Load-cell</dd></div>
+            <div><dt>Ekran</dt><dd>3 ekran</dd></div>
+          </dl>
+          <p class="games"><span>Oyunlar</span>Assetto Corsa Competizione · iRacing · F1&nbsp;25 · DiRT Rally&nbsp;2.0</p>
         </div>
       </article>
 
-      <article class="cart cart-ps rv">
-        <div class="cart-in">
-          <div class="cart-grip" aria-hidden="true"><span>PS5-2</span></div>
-          <div class="cart-label">
-            <div class="art-ph" role="img" aria-label="PS5 köşesi fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>PS5 köşesi fotoğrafı</span></div>
-            <p class="price-sticker"><b>100</b><span>₺ / saat</span></p>
+      <article class="card rv">
+        <div class="ph" role="img" aria-label="PS5 köşesi fotoğrafı için yer"><b>Örnek resim gelecektir</b><span>PS5 köşesi</span></div>
+        <div class="card-body">
+          <h3>PS5</h3>
+          <div class="card-meta">
+            <p class="card-units">2 istasyon</p>
+            <p class="card-price"><b>100 ₺</b><span>/ saat</span></p>
           </div>
-          <div class="cart-body">
-            <div class="cart-title">
-              <h3>PS5</h3>
-              <p class="units"><span class="slots" aria-hidden="true"><i></i><i></i></span>2 istasyon</p>
-            </div>
-            <ul class="spec">
-              <li>55" 4K TV</li>
-              <li>İstasyon başına 2 kol</li>
-            </ul>
-            <p class="games"><span>Oyunlar</span>Gran Turismo&nbsp;7&nbsp;· F1&nbsp;25&nbsp;· Need for Speed Unbound</p>
-          </div>
+          <dl class="spec">
+            <div><dt>Ekran</dt><dd>55" 4K TV</dd></div>
+            <div><dt>Kol</dt><dd>İstasyon başına 2</dd></div>
+          </dl>
+          <p class="games"><span>Oyunlar</span>Gran Turismo&nbsp;7 · F1&nbsp;25 · Need for Speed Unbound</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 02 FİYATLAR: bilet rulosu -->
-<section class="price" id="fiyatlar" aria-labelledby="h-price">
+<!-- 02 FİYATLAR -->
+<section class="sec price" id="fiyatlar" aria-labelledby="h-price">
   <div class="wrap price-in">
-    <header class="head">
-      <span class="head-no" aria-hidden="true">02</span>
-      <h2 id="h-price">Fiyatlar</h2>
-      <p>Kokpit ya da istasyon başına.</p>
-    </header>
-
-    <div class="dispenser">
-      <div class="dispenser-slot" aria-hidden="true"><span>Fiyat listesi</span></div>
-      <ol class="roll">
-        <li class="pt rv">
-          <p class="pt-stub"><b>30</b><span>dk</span></p>
-          <dl class="pt-body">
-            <div><dt>Standart</dt><dd>120<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>Pro</dt><dd>180<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>PS5</dt><dd>60<span class="sr-only"> ₺</span></dd></div>
-          </dl>
-        </li>
-        <li class="pt rv">
-          <p class="pt-stub"><b>1</b><span>saat</span></p>
-          <dl class="pt-body">
-            <div><dt>Standart</dt><dd>200<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>Pro</dt><dd>300<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>PS5</dt><dd>100<span class="sr-only"> ₺</span></dd></div>
-          </dl>
-        </li>
-        <li class="pt rv">
-          <p class="pt-stub"><b>2</b><span>saat</span></p>
-          <dl class="pt-body">
-            <div><dt>Standart</dt><dd>380<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>Pro</dt><dd>550<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>PS5</dt><dd>180<span class="sr-only"> ₺</span></dd></div>
-          </dl>
-        </li>
-        <li class="pt pt-card rv">
-          <p class="pt-stub"><b>5</b><span>saat kart</span></p>
-          <dl class="pt-body">
-            <div><dt>Standart</dt><dd>900<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>Pro</dt><dd>1.350<span class="sr-only"> ₺</span></dd></div>
-            <div><dt>PS5</dt><dd>450<span class="sr-only"> ₺</span></dd></div>
-          </dl>
-        </li>
-      </ol>
+    <div class="price-side">
+      <header class="head">
+        <p class="head-no" aria-hidden="true"><span>02</span></p>
+        <h2 id="h-price">Fiyatlar</h2>
+        <p class="head-note">Kokpit ya da istasyon başına, ₺.</p>
+      </header>
+      <a class="btn btn-line price-cta" href="#bilet"><span>Randevu al</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
 
+    <div class="table-wrap rv">
+      <table class="ptable">
+        <caption class="sr-only">Süreye göre fiyatlar, Türk lirası</caption>
+        <thead>
+          <tr><th scope="col"><span class="sr-only">Süre</span></th><th scope="col">Standart</th><th scope="col" class="col-pro">Pro</th><th scope="col">PS5</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">30 dk</th><td>120</td><td class="col-pro">180</td><td>60</td></tr>
+          <tr><th scope="row">1 saat</th><td>200</td><td class="col-pro">300</td><td>100</td></tr>
+          <tr><th scope="row">2 saat</th><td>380</td><td class="col-pro">550</td><td>180</td></tr>
+          <tr class="row-card"><th scope="row">5 saat <em>kart</em></th><td>900</td><td class="col-pro">1.350</td><td>450</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
 <!-- 03 RANDEVU -->
-<section class="book" id="bilet" aria-labelledby="h-book">
+<section class="sec book" id="bilet" aria-labelledby="h-book">
   <div class="wrap book-in">
-    <header class="book-head">
-      <span class="head-no" aria-hidden="true">03</span>
+    <header class="head book-head">
+      <p class="head-no" aria-hidden="true"><span>03</span></p>
       <h2 id="h-book">Randevu al</h2>
-      <p>Sistemi, günü ve saati seç.</p>
+      <p class="head-note">Sistemi, günü ve saati seç.</p>
     </header>
 
     <div class="book-main">
-      <form class="machine" id="board" novalidate>
-        <p class="machine-nojs nojs-only">Randevu için bizi ara: 0546 776 79 98</p>
+      <form class="form" id="board" novalidate>
+        <p class="form-nojs nojs-only">Randevu için bizi ara: <a href="tel:+905467767998">0546 776 79 98</a></p>
 
         <fieldset class="pick js-only">
           <legend>Sistem</legend>
@@ -259,46 +226,43 @@
         </fieldset>
 
         <div class="pick js-only">
-          <label class="pick-label" for="who">Ad soyad <span>(isteğe bağlı)</span></label>
+          <label class="pick-label" for="who">Ad soyad <span>İsteğe bağlı</span></label>
           <input id="who" name="who" autocomplete="name" placeholder="Örn. Deniz Yılmaz" enterkeyhint="done">
         </div>
       </form>
 
-      <div class="slot" aria-hidden="true"></div>
-      <div class="out" id="ticket">
+      <aside class="pass" id="ticket" aria-label="Randevu özeti">
         <p class="sr-only" id="ticketSay" aria-live="polite"></p>
-        <div class="out-top">
-          <p class="out-brand" lang="en">Junior Game Lounge</p>
-          <p class="out-kind">Randevu özeti</p>
+        <div class="pass-top">
+          <p class="pass-brand"><span lang="en">JUNIOR</span> Game Lounge</p>
+          <p class="pass-kind">Randevu özeti</p>
         </div>
-        <p class="out-line" id="ticketLine">Sistem, gün ve saat seç</p>
-        <div class="out-perf" aria-hidden="true"></div>
-        <div class="out-bottom">
-          <p class="out-total js-only"><span>Toplam</span><strong id="ticketTotal">200 ₺</strong></p>
-          <a class="send" id="sendWa" href="https://wa.me/905467767998" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg><span id="sendLabel">Randevu al</span></a>
-          <p class="out-note">Ödeme salonda.</p>
+        <p class="pass-line" id="ticketLine">Sistem, gün ve saat seç</p>
+        <div class="pass-perf" aria-hidden="true"></div>
+        <div class="pass-bottom">
+          <p class="pass-total js-only"><span>Toplam</span><strong id="ticketTotal">200 ₺</strong></p>
+          <a class="btn btn-red send" id="sendWa" href="https://wa.me/905467767998" target="_blank" rel="noopener"><span id="sendLabel">Randevu al</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="pass-note">Ödeme salonda.</p>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
 
 <!-- 04 KONUM -->
-<section class="loc" id="konum" aria-labelledby="h-loc">
+<section class="sec loc" id="konum" aria-labelledby="h-loc">
   <div class="wrap">
     <header class="head">
-      <span class="head-no" aria-hidden="true">04</span>
+      <p class="head-no" aria-hidden="true"><span>04</span></p>
       <h2 id="h-loc">Konum</h2>
     </header>
 
     <div class="loc-grid">
       <div class="loc-info">
-        <div class="find">
-          <address>İskele Mah., Eski Ayvalık Cad. No: 5<br>10700 Burhaniye / Balıkesir</address>
-        </div>
+        <address class="addr">İskele Mah., Eski Ayvalık Cad.&nbsp;No:&nbsp;5<br>10700 Burhaniye / Balıkesir</address>
 
         <div class="hours">
-          <p class="hours-title"><span>Her gün</span> 09:00–02:00</p>
+          <p class="hours-title"><span>Her gün</span><b>09:00–02:00</b></p>
           <ol class="leds" id="leds" aria-hidden="true">
             <li class="on"></li><li class="on"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li class="on"></li><li class="on"></li><li class="on"></li>
             <li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li>
@@ -308,9 +272,9 @@
         </div>
 
         <ul class="contact">
-          <li><a href="tel:+905467767998"><span class="c-ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="c-txt"><small>Telefon</small>0546 776 79 98</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a href="https://wa.me/905467767998" target="_blank" rel="noopener"><span class="c-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><span class="c-txt"><small>WhatsApp</small>Mesaj yaz</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a href="https://www.instagram.com/juniorgamelounge/" target="_blank" rel="noopener"><span class="c-ico"><svg aria-hidden="true"><use href="#i-cam"/></svg></span><span class="c-txt"><small>Instagram</small>@juniorgamelounge</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="tel:+905467767998"><span class="c-ico" aria-hidden="true"><svg><use href="#i-phone"/></svg></span><span class="c-txt"><small>Telefon</small>0546 776 79 98</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="https://wa.me/905467767998" target="_blank" rel="noopener"><span class="c-ico" aria-hidden="true"><svg><use href="#i-chat"/></svg></span><span class="c-txt"><small>WhatsApp</small>Mesaj yaz</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="https://www.instagram.com/juniorgamelounge/" target="_blank" rel="noopener"><span class="c-ico" aria-hidden="true"><svg><use href="#i-cam"/></svg></span><span class="c-txt"><small>Instagram</small>@juniorgamelounge</span><svg class="c-go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
         </ul>
       </div>
 
@@ -318,9 +282,8 @@
         <div class="map">
           <iframe title="Junior Game Lounge haritada" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://maps.google.com/maps?q=Eski%20Ayval%C4%B1k%20Caddesi%205%2C%20%C4%B0skele%2C%20Burhaniye%2C%20Bal%C4%B1kesir&amp;z=16&amp;output=embed"></iframe>
-          <span class="map-pin" aria-hidden="true"><svg><use href="#i-pin"/></svg>Buradayız</span>
         </div>
-        <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eski%20Ayval%C4%B1k%20Caddesi%205%2C%20Burhaniye%2C%20Bal%C4%B1kesir" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Yol tarifi al<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ink dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eski%20Ayval%C4%B1k%20Caddesi%205%2C%20Burhaniye%2C%20Bal%C4%B1kesir" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Yol tarifi al</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -329,12 +292,12 @@
 </main>
 
 <footer class="foot">
-  <div class="foot-perf" aria-hidden="true"></div>
   <div class="wrap foot-in">
-    <p class="foot-word" lang="en" aria-hidden="true">Junior</p>
+    <p class="foot-word" lang="en" aria-hidden="true"><span class="foot-j">JUNIOR</span><span class="lock-sub"><span>Game</span><i></i><span>Lounge</span></span></p>
     <div class="foot-cols">
-      <p><b>Junior Game Lounge</b><br>Eski Ayvalık Cad. No: 5, Burhaniye</p>
-      <p>Her gün 09:00–02:00<br><a href="tel:+905467767998">0546 776 79 98</a> · <a href="https://www.instagram.com/juniorgamelounge/" target="_blank" rel="noopener">@juniorgamelounge</a></p>
+      <p><small>Adres</small>Eski Ayvalık Cad.&nbsp;No:&nbsp;5<br>Burhaniye / Balıkesir</p>
+      <p><small>Saat</small>Her gün 09:00–02:00</p>
+      <p><small>İletişim</small><a href="tel:+905467767998">0546 776 79 98</a><br><a href="https://www.instagram.com/juniorgamelounge/" target="_blank" rel="noopener">@juniorgamelounge</a></p>
     </div>
     <p class="foot-copy">© <span id="year">2026</span> Junior Game Lounge</p>
   </div>
@@ -342,9 +305,9 @@
 
 <!-- Telefonda alt çubuk -->
 <nav class="bar" aria-label="Hızlı iletişim">
-  <a class="bar-book" href="#bilet">Randevu al<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-  <a class="bar-wa" href="https://wa.me/905467767998" target="_blank" rel="noopener" aria-label="WhatsApp'tan yaz"><svg aria-hidden="true"><use href="#i-chat"/></svg></a>
-  <a class="bar-call" href="tel:+905467767998"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ara</a>
+  <a class="bar-book" href="#bilet"><span>Randevu al</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="bar-ico bar-wa" href="https://wa.me/905467767998" target="_blank" rel="noopener" aria-label="WhatsApp'tan yaz"><svg aria-hidden="true"><use href="#i-chat"/></svg></a>
+  <a class="bar-ico bar-call" href="tel:+905467767998" aria-label="Ara, 0546 776 79 98"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>Ara</span></a>
 </nav>
 
 <script src="script.js"></script>
