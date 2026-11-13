@@ -9,8 +9,6 @@
 (() => {
   // JS çalışıyor: seçiciler görünsün (bkz. .js-only / .nojs-only)
   document.documentElement.classList.add('js');
-  // iOS Safari :active stillerini ancak bir touchstart dinleyicisi varsa uygular
-  document.addEventListener('touchstart', function () {}, { passive: true });
 
   // ---------- AYARLAR ----------
   const SYSTEMS = {
@@ -31,7 +29,7 @@
   const $ = s => document.querySelector(s);
   const pad = n => String(n).padStart(2, '0');
   const clock = mins => `${pad(Math.floor(mins / 60) % 24)}:${pad(mins % 60)}`;
-  const money = n => n.toLocaleString('tr-TR') + '\u00a0₺'; // sayı ile ₺ ayrı satıra düşmesin
+  const money = n => n.toLocaleString('tr-TR') + ' ₺';
   const key = d => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
   const setText = (el, v) => { if (el.textContent !== v) el.textContent = v; };
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -126,8 +124,7 @@
       const rel = k === today ? 'Bugün' : k === tomorrow ? 'Yarın' : i === 0 ? 'Bu gece' : '';
       const html = `<span>${rel || DAYS[d.getDay()]}</span><b>${d.getDate()}</b>`;
       if (b.innerHTML !== html) b.innerHTML = html;
-      // Görünen metinle başlar (sesli komut "Pzt 17" eşleşsin)
-      b.setAttribute('aria-label', `${rel || DAYS[d.getDay()]} ${d.getDate()} ${MONTHS_LONG[d.getMonth()]}, ${DAYS_LONG[d.getDay()]}`);
+      b.setAttribute('aria-label', `${rel ? rel + ', ' : ''}${d.getDate()} ${MONTHS_LONG[d.getMonth()]} ${DAYS_LONG[d.getDay()]}`);
     });
   }
 
@@ -198,8 +195,7 @@
       const d = days[state.day];
       const dayText = `${d.getDate()} ${MONTHS_LONG[d.getMonth()]} ${DAYS_LONG[d.getDay()]}${state.h >= 24 ? ' gecesi' : ''}`;
       const timeText = `${clock(state.h * 60)}–${clock(state.h * 60 + state.dur)}`;
-      // Ekranda saat aralığı tirede bölünmesin (WhatsApp mesajı aynen kalır)
-      setText(line, `${sys.name} · ${state.count} ${sys.unit} · ${dayText} ${timeText.replace('–', '\u2060–\u2060')}`);
+      setText(line, `${sys.name} · ${state.count} ${sys.unit} · ${dayText} ${timeText}`);
       ticket.classList.remove('is-nudge');
 
       const who = $('#who').value.trim();
@@ -285,12 +281,7 @@
     state.h = Number(b.dataset.v); render(); printTicket();
   });
   $('#who').addEventListener('input', renderTicket);
-  $('#board').addEventListener('submit', e => {
-    e.preventDefault();
-    // iOS "done" tuşu: klavyeyi kapat, özet kartı görünsün
-    const w = $('#who');
-    if (document.activeElement === w) w.blur();
-  });
+  $('#board').addEventListener('submit', e => e.preventDefault());
   $('#sendWa').addEventListener('click', e => {
     if (e.currentTarget.getAttribute('aria-disabled') !== 'true') return;
     e.preventDefault();
@@ -332,22 +323,6 @@
   setInterval(tick, 60000);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
   window.addEventListener('pageshow', tick);
-
-  // ---------- Telefonda alt çubuk ----------
-  // Çubuk sadece özet kartındaki "Randevu al" düğmesi ekrandayken çekilir.
-  // Formun üst kısmını doldururken Ara / WhatsApp hâlâ elinin altında.
-  if ('IntersectionObserver' in window) {
-    const sendBtn = $('#sendWa');
-    const root = document.documentElement;
-    const barIo = new IntersectionObserver(entries => {
-      entries.forEach(en => root.classList.toggle('send-on', en.isIntersecting));
-    });
-    if (sendBtn) barIo.observe(sendBtn);
-    // Girişteki "Randevu al" ekrandayken de çubuk çekilir (iki aynı düğme olmasın).
-    // Ayrı sınıf: iki gözlemci birbirinin durumunu silmesin.
-    const heroCta = document.querySelector('.hero-cta');
-    if (heroCta) new IntersectionObserver(es => es.forEach(en => root.classList.toggle('hero-on', en.isIntersecting))).observe(heroCta);
-  }
 
   // ---------- Kaydırınca beliren parçalar ----------
   // İçerik baştan görünür; sadece ekranın altında kalanlar JS ile
